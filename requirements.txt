@@ -5,5 +5,4 @@ requests
 django-cors-headers
 
 
-### django model instance as an api response
-
+##django model instance to dictionary
