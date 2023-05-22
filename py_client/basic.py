@@ -7,7 +7,7 @@ endpoint = "http://httpbin.org/anything"
 endpoint = "http://127.0.0.1:8000/api/"
 
 
-get_response = requests.get(endpoint, json={'query': "Hello World"})  ## HTTP  Requests
+get_response = requests.get(endpoint,params={"abc":123}, json={'query': "Hello World"})  ## HTTP  Requests
 # print(get_response.text) ### print raw text response
 
 
@@ -20,6 +20,8 @@ get_response = requests.get(endpoint, json={'query': "Hello World"})  ## HTTP  R
 # print(get_response.status_code)
 
 
-print(get_response.text)
-print(get_response.status_code)
-print(get_response.json()["message"])
+# print(get_response.text)
+# print(get_response.status_code)
+# print(get_response.json()["message"])
+
+print(get_response.json())
