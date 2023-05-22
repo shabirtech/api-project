@@ -7,7 +7,7 @@ endpoint = "http://httpbin.org/anything"
 endpoint = "http://127.0.0.1:8000/api/"
 
 
-get_response = requests.get(endpoint,params={"abc":123}, json={'query': "Hello World"})  ## HTTP  Requests
+get_response = requests.get(endpoint, json={'product_id': 123})  ## HTTP  Requests
 # print(get_response.text) ### print raw text response
 
 
