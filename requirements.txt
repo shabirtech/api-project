@@ -5,5 +5,5 @@ requests
 django-cors-headers
 
 
-
+### django model instance as an api response
 
