@@ -6,5 +6,3 @@ django-cors-headers
 
 
 
-
-### Rest framework view and response
