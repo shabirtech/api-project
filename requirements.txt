@@ -5,3 +5,5 @@ requests
 django-cors-headers
 
 
+
+### session authentication and premission
