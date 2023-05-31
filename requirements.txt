@@ -5,5 +5,3 @@ requests
 django-cors-headers
 
 
-
-### using function base view for create, retrieve or list
