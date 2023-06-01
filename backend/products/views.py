@@ -17,7 +17,6 @@ class ProductListCreateAPIView(StaffEditorPermissionMixin,generics.ListCreateAPI
         content = serializer.validated_data.get("content") or None
         if content is None:
             content = title
-       
         serializer.save(content = content)
 
         ## send a django signal
