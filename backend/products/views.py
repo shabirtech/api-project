@@ -11,7 +11,6 @@ from .serializers import ProductSerializer
 class ProductListCreateAPIView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    authentication_classes = [authentication.SessionAuthentication,TokenAuthentication]
     permission_classes = [permissions.IsAdminUser,IsStaffEditorPermission]
 
     def  perform_create(self, serializer):
@@ -31,6 +30,8 @@ product_list_create_view= ProductListCreateAPIView.as_view()
 class ProductDetailAPIView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    permission_classes = [permissions.IsAdminUser,IsStaffEditorPermission]
+
 
 
 product_detail_view = ProductDetailAPIView.as_view()
@@ -39,6 +40,7 @@ class ProductUpdateAPIView(generics.UpdateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = "pk"
+    permission_classes = [permissions.IsAdminUser,IsStaffEditorPermission]
 
     def perform_create(self, serializer):
         instance = serializer.save()
@@ -55,6 +57,8 @@ class ProductDestroyAPIView(generics.DestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     lookup_field = "pk"
+    permission_classes = [permissions.IsAdminUser,IsStaffEditorPermission]
+
 
     def perform_destroy(self,instance):
         super().perform_destroy(instance)
